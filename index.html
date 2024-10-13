@@ -8,14 +8,74 @@
 </head>
 
 <body>
-    <!--Login-->
-    <template id="login"><div class = "tempShow">
-    <script src="./ls/login.js"></script>
-    </div>
+    <template id="login">
+        <div class="container">
+            <h2 id="title">WELCOME TO REVANGE4U</h2>
+            <br><br><br>
+            <h3>Do you want revenge? This is the place!</h3><br>
+            <br><br>
+            <div id="center">
+                <h2 class="sign">If this is not your first revenge:</h2>
+    
+                <label for="username"><b>User-name</b></label><br>
+                <input id="username" type="text" placeholder="Enter Username" name="username" required><br>
+    
+                <label for="password"><b>Password</b></label><br>
+                <input id="password" type="password" placeholder="Enter Password" name="password" required><br><br>
+    
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label><br><br>
+                    
+                <button type="submit" id="logIn">Log-in</button><br><br>   
+                            
+                <p id="wrong"></p>
+    
+                <br><br>
+    
+    
+                <h2 class="sign">If this is your first revenge:</h2> <br>
+    
+                <button type="submit" id="signup">sign up</button>
+    
+                <button type="submit" id="guest">Continue as a guest</button>
+            </div>
+    
+
+            <script src="../revange4u/ls/login.js"></script>
+        </div>
+    </form>
+
+
+
     </template>
 
     <!--Signup-->
-    <template id="signup"><div class = "tempShow">
+    <template id="signup">
+        <div class="tempShow">
+
+            <h2 id="title">sign up</h2>
+            <h3>You finally decided to take revenge...</h3><br>
+    
+            <div id="center">
+                <h2 class="sign">Please fill in your information down below,Just because we maybe have to take revenge on you </h2>
+    
+                <label for="usernameInput"><b>User-name</b></label><br>
+                <input id="usernameInput" type="text" placeholder="Enter Username" name="usernameInput" required><br>
+    
+                <label for="password"><b>Password</b></label><br>
+                <input id="password" type="password" placeholder="Enter Password" name="password" required><br><br>
+    
+                <label for="password"><b>Password again</b></label><br>
+                <input id="password" type="password" placeholder="Enter Password" name="password" required><br><br>
+    
+                <input type="checkbox" checked="checked" name="newsletter" id="newsletter"> 
+                <label for="newsletter">Join to our newsletter</label>
+                <br><br>
+                    
+                <button type="submit" id="signIn">sign up</button>
+                <p id="change"></p>
+            </div>
     
     <script src="./ls/signup.js"></script>
     </div>
