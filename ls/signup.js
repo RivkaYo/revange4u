@@ -17,7 +17,7 @@ document
   .addEventListener("click", () => showContent("revenges"));
 
 // Sign Up
-const signButton = document.getElementById("signIn");
+const users = localStorage.setItem("users", "[]");
 
 // construction function
 function SignInfo(username, password) {
@@ -25,7 +25,6 @@ function SignInfo(username, password) {
   this.password = password;
 }
 
-signButton.addEventListener("click", signIn);
 
 function signIn() {
   const username = document.getElementById("newUsername").value;
@@ -49,3 +48,5 @@ function signIn() {
     window.location.href = "./index.html";
   }
 }
+const signButton = document.getElementById("signIn");
+signButton.addEventListener("click", () => signIn());
