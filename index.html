@@ -80,13 +80,25 @@
     </template>
 
     <template id="revanges">
+    <h1>Life goals left:</h1>
+    <div id="revengeList"></div>
     
         <script src="./ls/revenges.js"></script>
     </template>
 
     <template id="addRevange">
+    <h1>New Revange</h1>
+    <form>
+        <label for="name">Who deserves it this time?</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="revangeDetails">What to they deserve?</label>
+        <input type="text" id="revangeDetails" name="revangeDetails"><br><br>
+        <submit>Add revange</submit>
+        <input type="submit" value="Submit">
+    </form>
     
     <script src="./ls/addRevange.js"></script>
     </template>
+    <script src="./ls/spa.js"></script>
 </body>
 </html>
