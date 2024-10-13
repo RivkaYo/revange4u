@@ -1,5 +1,4 @@
 //localStorage.clear();
-debugger;
 let currTemp;
 //Show template
 function showContent(tempId) {

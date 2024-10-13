@@ -1,4 +1,5 @@
 //Show template
+debugger;
 function showContent(tempId) {
     //remove last
     if (currTemp) {document.getElementsByClassName("tempShow")[0].remove()}
@@ -12,8 +13,10 @@ function showContent(tempId) {
 
 document.getElementById("newRevengeButton").addEventListener('click', () => showContent("addRevenge"));
 
-// let revengeListParsed = JSON.parse(localStorage.getItem("revenge"));
-// console.log('revengeListParsed: ', revengeListParsed);
-// for (let i=0; i>revengeListParsed.length; i++) {
-//     document.getElementById("revengeList").innerHTML = "<li> name: " + revengeListParsed[i].name + "Revenge:" + revengeListParsed[i].details + "</li>";
-// };
+
+x = JSON.parse(localStorage.getItem("revenge"));
+console.log(typeof x);
+console.log('x: ', x);
+for (let i=0; i>x.length; i++) {
+    document.getElementById("revengeList").innerHTML = "<li> name: " + x[i].name + "Revenge:" + x[i].details + "</li>";
+};
