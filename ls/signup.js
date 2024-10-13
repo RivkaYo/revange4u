@@ -17,7 +17,7 @@ document
   .addEventListener("click", () => showContent("revenges"));
 
 // Sign Up
-const users = localStorage.setItem("users", "[]");
+const users = JSON.parse(localStorage.getItem("users")) || []; // טעינת משתמשים אם קיימים
 
 // construction function
 function SignInfo(username, password) {
@@ -25,28 +25,26 @@ function SignInfo(username, password) {
   this.password = password;
 }
 
-
 function signIn() {
   const username = document.getElementById("newUsername").value;
   const password = document.getElementById("newpassword").value;
 
-  var usersArr = JSON.parse(window.localStorage.getItem("users"));
-
-  for (let i = 0; i < usersArr.length; i++) {
-    if (username === usersArr[i]["username"]) {
-      document.getElementById("change").innerHTML =
-        "This username is taken. Please pick another one";
-      document.getElementById("usernameInput").style.border = "1px solid red";
-      return;
-    }
-
-    const newUser = new SignInfo(username, password);
-    usersArr.push(newUser);
-    console.log(usersArr);
-    window.localStorage.setItem("users", JSON.stringify(usersArr));
-    window.localStorage.setItem("currentUser", newUser);
-    window.location.href = "./index.html";
+  // בדוק אם המשתמש כבר קיים
+  const existingUser = users.find((user) => user.username === username);
+  if (existingUser) {
+    document.getElementById("change").innerHTML =
+      "This username is taken. Please pick another one";
+    document.getElementById("newUsername").style.border = "1px solid red";
+    return;
   }
+
+  // אם המשתמש לא קיים, הוסף אותו
+  const newUser = new SignInfo(username, password);
+  users.push(newUser); // הוסף את המשתמש החדש למערך
+  window.localStorage.setItem("users", JSON.stringify(users)); // עדכן את ה-localStorage עם המערך החדש
+  window.localStorage.setItem("currentUser", JSON.stringify(newUser)); // עדכן את המשתמש הנוכחי
+  window.location.href = "./index.html"; // הפניה לדף התחברות
 }
-const signButton = document.getElementById("signIn");
+
+const signButton = document.getElementById("signupBtn");
 signButton.addEventListener("click", () => signIn());

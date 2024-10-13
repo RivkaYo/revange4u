@@ -13,5 +13,7 @@ function showContent(tempId) {
     currTemp = temp;
 };
 
+// var usersArr = JSON.parse(window.localStorage.getItem("users"));
+
 //showContent("login");
 showContent("signup");
