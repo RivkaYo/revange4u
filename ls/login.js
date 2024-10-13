@@ -10,17 +10,16 @@ function showContent(tempId) {
     currTemp = temp;
 };
 
-document.getElementById("logIn").addEventListener('click', () => showContent("revenges"));
+document.getElementById("login").addEventListener('click', () => showContent("revenges"));
 document.getElementById("guest").addEventListener('click', () => showContent("revenges"));
+document.getElementById("signup").addEventListener('click', () => showContent("signup"));
 
 
-
-const logIn = document.getElementById("logIn");
+const logIn = document.getElementById("login");
 window.localStorage.setItem("currentUser", "")
 
 
 
-logIn.addEventListener("click", logInInfo);
 
 function logInInfo() {
     const username = document.getElementById("username").value;
@@ -32,7 +31,6 @@ function logInInfo() {
             document.querySelector("#wrong").innerHTML = "";
             window.localStorage.removeItem("currentUser")
             window.localStorage.setItem("currentUser", JSON.stringify(currentUser))
-            window.location.href = '../GAME-WEBSITE/html/home.html';
             break;
         }
         else {
@@ -41,4 +39,5 @@ function logInInfo() {
     }
     console.log(currentUser)
 }
+logIn.addEventListener("click", logInInfo);
 
