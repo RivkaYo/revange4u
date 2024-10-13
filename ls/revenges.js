@@ -12,7 +12,8 @@ function showContent(tempId) {
 
 document.getElementById("newRevengeButton").addEventListener('click', () => showContent("addRevenge"));
 
-
-let revengeDisplay = JSON.parse(localStorage.getItem("revenge"));
-console.log('revengeDisplay: ', revengeDisplay);
-document.getElementById("revengeList").innerHTML = "<li>revengeDisplay</li>";
+// let revengeListParsed = JSON.parse(localStorage.getItem("revenge"));
+// console.log('revengeListParsed: ', revengeListParsed);
+// for (let i=0; i>revengeListParsed.length; i++) {
+//     document.getElementById("revengeList").innerHTML = "<li> name: " + revengeListParsed[i].name + "Revenge:" + revengeListParsed[i].details + "</li>";
+// };
