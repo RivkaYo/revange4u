@@ -1,5 +1,5 @@
-localStorage.clear();
-
+//localStorage.clear();
+debugger;
 let currTemp;
 //Show template
 function showContent(tempId) {
@@ -14,4 +14,9 @@ function showContent(tempId) {
 };
 
 //showContent("login");
-showContent("signup");
+//showContent("signup");
+showContent("revenges");
+
+if (!localStorage.getItem("revenge")) {
+    localStorage.setItem("revenge", JSON.stringify([]));
+}

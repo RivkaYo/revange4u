@@ -21,17 +21,28 @@ class revenge{
     this.isComplete = false;
 };}
 
+
 //add revenge to ls
 let revengeName = document.querySelector("#name");
 let revengeDetails = document.querySelector("#revengeDetails");
 
 const addRevengeToLocalStorage = () => {
+
     let revengeNameValue = revengeName.value;
     let revengeDetailsValue = revengeDetails.value;
-    //creats new and upload
+    //creats new revenge instince 
     let currRevenge = new revenge(revengeNameValue, revengeDetailsValue);
-    let stringedCurrRevenge = JSON.stringify(currRevenge);
-    localStorage.setItem("revenge", stringedCurrRevenge);
+
+    //get parsed revenge list
+    let revengeList = localStorage.getItem("revenge");
+    let revengeListParsed = JSON.parse(revengeList);
+    
+    //add instince to array
+    revengeListParsed.push(currRevenge);
+
+    //upload stringed list
+    let revengeListStringed = JSON.stringify(revengeListParsed);
+    localStorage.setItem("revenge", revengeListStringed);
 };
 
 document.getElementById("submitAddRevenge").addEventListener('click', () => addRevengeToLocalStorage());
