@@ -6,8 +6,7 @@ const checkUser = () => {
   const currentUser = usersArr.find(
     (user) => user.username === username && user.password === password
   );
-}
-
+};
 
 // Signup ---------------------------------------------------------------------------
 
