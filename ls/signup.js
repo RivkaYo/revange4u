@@ -12,9 +12,6 @@ function showContent(tempId) {
   currTemp = temp;
 }
 
-document
-  .getElementById("signup")
-  .addEventListener("click", () => showContent("revenges"));
 
 // Sign Up
 const users = JSON.parse(localStorage.getItem("users")) || []; // טעינת משתמשים אם קיימים
