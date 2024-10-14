@@ -3,5 +3,6 @@ body {
     background-image: linear-gradient(#A91D3A, #151515);;
     text-align: center;
     color: aliceblue;
-    font-family: Shadows Into Light    ;
+    font-family: Shadows Into Light;
+    font-size: 2em;
 }
