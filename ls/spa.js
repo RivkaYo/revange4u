@@ -15,7 +15,7 @@ function showContent(tempId) {
 // var usersArr = JSON.parse(window.localStorage.getItem("users"));
 
 showContent("login");
-showContent("signup");
+// showContent("signup");
 
 if (!localStorage.getItem("revenge")) {
     localStorage.setItem("revenge", JSON.stringify([]));

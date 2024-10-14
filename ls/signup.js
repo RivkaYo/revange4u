@@ -27,13 +27,12 @@ function SignInfo(username, password) {
 
 function signIn(e) {
   e.preventDefault();
-  // console.log("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
   const username = document.getElementById("newUsername").value;
   const password = document.getElementById("newpassword").value;
 
   // בדוק אם המשתמש כבר קיים
   const existingUser = users.find((user) => user.username === username);
-  console.log(existingUser)
+  console.log(existingUser);
   if (existingUser) {
     document.getElementById("change").innerHTML =
       "This username is taken. Please pick another one";
@@ -50,3 +49,4 @@ function signIn(e) {
 
 const signButton = document.getElementById("signupBtn");
 signButton.addEventListener("click", (e) => signIn(e));
+signButton.addEventListener("click", () => showContent("addRevenge"));
