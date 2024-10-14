@@ -12,19 +12,18 @@ function showContent(tempId) {
 
 document.getElementById("newRevengeButton").addEventListener('click', () => showContent("addRevenge"));
 
+//display Revenges
+let displayRevengesFAJAX = new FAJAX();
+displayRevengesFAJAX.open("GET", "myServer/api/revenge");
+displayRevengesFAJAX.onload = function() {}
+displayRevengesFAJAX.send(revenge);
 
-revengeList = JSON.parse(localStorage.getItem("revenge"));
-
-for (let i=0; i < revengeList.length; i++) {
-    document.getElementById("revengeList").innerHTML += `<div class="singleRevenge"><ul>You neet to revenge ${revengeList[i].name} with ${revengeList[i].details}. <button onclick="deleteitem()" class = "completeRevengeBtn" type="button">Revenge completed!</button></ul></div> `
+// deleteing revenges
+const deleteRevenge = (event) => {
+    let deleteRevengeFAJAX = new FAJAX();
+    deleteRevengeFAJAX.open("DELETE", "myServer/api/revenge");
+    deleteRevengeFAJAX.onload = function() {}
+    deleteRevengeFAJAX.send(event);
 };
 
-// //deleteing revenges
-// const deleteRevenge = (event) => {
-//     if (div.id === event.target.id) {
-//         //remove from display
-//         document.getElementById("revengeList").removeChild(div);
-//     }
-// }
-
-// Array.from(document.getElementsByClassName("completeRevengeBtn")).forEach(btn => {btn.addEventListener('click', (event) => deleteRevenge(event))});
+Array.from(document.getElementsByClassName("completeRevengeBtn")).forEach(btn => {btn.addEventListener('click', (event) => deleteRevenge(event))});

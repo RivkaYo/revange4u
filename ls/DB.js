@@ -24,6 +24,11 @@ const addUser = () => {
 
 // Revenges -------------------------------------------------------------------------
 
+const getRevenges = () => {
+  revengeList = JSON.parse(localStorage.getItem("revenge"));
+  return revengeList;
+};
+
 const displayRevenges = () => {
   //displays all revenges from ls
   revengeList = JSON.parse(localStorage.getItem("revenge"));
@@ -50,9 +55,9 @@ const addRevenge = () => {
   let revengeName = document.querySelector("#name");
   let revengeDetails = document.querySelector("#revengeDetails");
 
+  //creats new revenge instince
   let revengeNameValue = revengeName.value;
   let revengeDetailsValue = revengeDetails.value;
-  //creats new revenge instince
   let currRevenge = new revenge(revengeNameValue, revengeDetailsValue);
 
   //get parsed revenge list
