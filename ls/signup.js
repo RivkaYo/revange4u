@@ -38,10 +38,10 @@ function signIn(e) {
   }
 
   // אם המשתמש לא קיים, הוסף אותו
-  const newUser = new SignInfo(username, password);
-  users.push(newUser); // הוסף את המשתמש החדש למערך
-  window.localStorage.setItem("users", JSON.stringify(users)); // עדכן את ה-localStorage עם המערך החדש
-  window.localStorage.setItem("currentUser", JSON.stringify(newUser)); // עדכן את המשתמש הנוכחי
+  let addUserFAJAX = new FAJAX();
+  addUserFAJAX.open("PUT", "myServer/api/revenge");
+  addUserFAJAX.onload = function () {};
+  addUserFAJAX.send(username, password);
 }
 
 const signButton = document.getElementById("signupBtn");

@@ -6,11 +6,8 @@ const checkUser = () => {
   const currentUser = usersArr.find(
     (user) => user.username === username && user.password === password
   );
+}
 
-  // תשנה את המשמש הנוכחי
-  window.localStorage.removeItem("currentUser");
-  window.localStorage.setItem("currentUser", JSON.stringify(currentUser)); // עדכן את המשתמש הנוכחי ב-localStorage
-};
 
 // Signup ---------------------------------------------------------------------------
 
