@@ -3,7 +3,7 @@
 const checkUser = () => {
   // טוען את המשתמשים מ-localStorage
   const usersArr = JSON.parse(localStorage.getItem("users")) || [];
-  const currentUser = usersArr.find(
+  currentUser = usersArr.find(
     (user) => user.username === username && user.password === password
   );
 };
