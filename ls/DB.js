@@ -48,14 +48,6 @@ const deleteRevenge = (event) => {
 // New revenges ---------------------------------------------------------------------
 
 const addRevenge = () => {
-  //adds Revenge to local storage
-  let revengeName = document.querySelector("#name");
-  let revengeDetails = document.querySelector("#revengeDetails");
-
-  //creats new revenge instince
-  let revengeNameValue = revengeName.value;
-  let revengeDetailsValue = revengeDetails.value;
-  let currRevenge = new revenge(revengeNameValue, revengeDetailsValue);
 
   //get parsed revenge list
   let revengeList = localStorage.getItem("revenge");
