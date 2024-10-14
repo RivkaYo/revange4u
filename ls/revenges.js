@@ -1,5 +1,4 @@
 //Show template
-
 function showContent(tempId) {
     //remove last
     if (currTemp) {document.getElementsByClassName("tempShow")[0].remove()}
