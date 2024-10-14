@@ -1,0 +1,11 @@
+
+#revengeList {
+    display: flex;
+}
+
+.singleRevenge {
+    border: 5px dotted black;
+    margin: 20px;
+    border-radius: 25px;
+    padding: 20px;
+}
