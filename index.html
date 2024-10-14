@@ -6,12 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="./css/revanges.css">
+    <link rel="stylesheet" href="./css/addRevege.css">
 </head>
 
 <body>
     <!--Login-->
     <template id="login">
-        <script src="./ls/users.js"></script>
         <div class="tempShow">
             <h2 id="title">WELCOME TO REVANGE4U</h2>
             <br><br><br>
@@ -20,32 +22,36 @@
             <div id="center">
                 <h2 class="sign">If this is not your first revenge:</h2>
                 <form id="loginForm">
-    
-                <label for="username"><b>User-name</b></label><br>
+                    
+                    <label for="username"><b>User-name</b></label><br>
                 <input id="username" type="text" placeholder="Enter Username" name="username" required><br>
-    
+                
                 <label for="password"><b>Password</b></label><br>
                 <input id="password" type="password" placeholder="Enter Password" name="password" required><br><br>
-    
+                
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label><br><br>
-                    
+                
                 <button type="submit" id="submitBtn">Log-in</button><br><br>   
+                
+                <p id="error-message" style="color: red; display: none;">Invalid username or password</p>
+                
                             
                            <p id="wrong"></p>
     
                 <br><br>
-    
-    
+                
+                
                 <h2 class="sign">If this is your first revenge:</h2> <br>
-    
+                
                 <button type="submit" id="signup">sign up</button>
-    
+                
                 <button type="submit" id="guest">Continue as a guest</button>
             </div>
-    
-
+            
+            
+            <script src="./ls/users.js"></script>
             <script src="./ls/login.js"></script>
         </div>
     </form>
@@ -53,14 +59,16 @@
 
     <!--Signup-->
     <template id="signup">
-        <script src="./ls/users.js"></script>
         <div class = "tempShow">
-
+            
             <h2 id="title">sign up</h2>
             <h3>You finally decided to take revenge...</h3><br>
     
             <div id="center">
                 <h2 class="sign">Please fill in your information down below,Just because we maybe have to take revenge on you </h2>
+                
+                <form id="signupForm">
+                    <label for="usernameInput"><b>User-name</b></label><br>
     
                 <form id="signupForm" onsubmit="(e)=> e.preventDefault()">
                 <label for="usernameInput"><b>User-name</b></label><br>
@@ -69,25 +77,29 @@
                 <label for="password"><b>Password</b></label><br>
                 <input id="newpassword" type="password" placeholder="Enter Password" name="password" required><br><br>
     
+                <!-- <label for="passwordd"><b>Password again</b></label><br>
+                <input id="passwordd" type="password" placeholder="Enter Password" name="password" required><br><br> -->
+                
+    
                 <input type="checkbox" checked="checked" name="newsletter" id="newsletter"> 
                 <label for="newsletter">Join to our newsletter</label>
                 <br><br>
-                    
+                
                 <button type="submit" id="signupBtn">sign up</button>
                 <p id="change"></p>
             </form>
             </div>
         </div>
     
+    <script src="./ls/users.js"></script>
     <script src="./ls/signup.js"></script>
-    </template>
+</template>
 
-    <!--revenges-->
+<!--revenges-->
     <template id="revenges">
     <div class = "tempShow">
         <h1>Life goals left:</h1>
         <ol id="revengeList">
-            <li class = "revengeListItem"></li>
         </ol>
         <button id = "newRevengeButton"><img src="https://e7.pngegg.com/pngimages/106/279/png-clipart-computer-icons-medicine-health-care-plus-button-medicine-hospital.png" width="100" height = "100"></button>
         
@@ -107,7 +119,6 @@
             <input type="text" id="revengeDetails" name="revengeDetails"><br><br>
             
             <button id="submitAddRevenge">Add revenge</button>
-            <button id="submitAddRevenge2">Add submitAddRevenge2</button>
         </form>
         
         <script src="./ls/addRevange.js"></script>

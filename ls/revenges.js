@@ -1,4 +1,5 @@
 //Show template
+
 function showContent(tempId) {
     //remove last
     if (currTemp) {document.getElementsByClassName("tempShow")[0].remove()}
@@ -12,8 +13,9 @@ function showContent(tempId) {
 
 document.getElementById("newRevengeButton").addEventListener('click', () => showContent("addRevenge"));
 
-// let revengeListParsed = JSON.parse(localStorage.getItem("revenge"));
-// console.log('revengeListParsed: ', revengeListParsed);
-// for (let i=0; i>revengeListParsed.length; i++) {
-//     document.getElementById("revengeList").innerHTML = "<li> name: " + revengeListParsed[i].name + "Revenge:" + revengeListParsed[i].details + "</li>";
-// };
+
+revengeList = JSON.parse(localStorage.getItem("revenge"));
+
+for (let i=0; i < revengeList.length; i++) {
+    document.getElementById("revengeList").innerHTML += `<div class="singleRevenge"><ul>You neet to revenge ${revengeList[i].name} with ${revengeList[i].details}. <button onclick="deleteitem()" class = "completeRevengeBtn" type="button">Revenge completed!</button></ul></div> `
+};
