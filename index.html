@@ -62,15 +62,12 @@
             <div id="center">
                 <h2 class="sign">Please fill in your information down below,Just because we maybe have to take revenge on you </h2>
     
-                <form id="signupForm">
+                <form id="signupForm" onsubmit="(e)=> e.preventDefault()">
                 <label for="usernameInput"><b>User-name</b></label><br>
                 <input id="newUsername" type="text" placeholder="Enter Username" name="usernameInput" required><br>
     
                 <label for="password"><b>Password</b></label><br>
                 <input id="newpassword" type="password" placeholder="Enter Password" name="password" required><br><br>
-    
-                <!-- <label for="passwordd"><b>Password again</b></label><br>
-                <input id="passwordd" type="password" placeholder="Enter Password" name="password" required><br><br> -->
     
                 <input type="checkbox" checked="checked" name="newsletter" id="newsletter"> 
                 <label for="newsletter">Join to our newsletter</label>
@@ -78,9 +75,9 @@
                     
                 <button type="submit" id="signupBtn">sign up</button>
                 <p id="change"></p>
+            </form>
             </div>
         </div>
-    </form>
     
     <script src="./ls/signup.js"></script>
     </template>

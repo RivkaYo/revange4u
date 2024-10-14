@@ -25,12 +25,15 @@ function SignInfo(username, password) {
   this.password = password;
 }
 
-function signIn() {
+function signIn(e) {
+  e.preventDefault();
+  // console.log("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
   const username = document.getElementById("newUsername").value;
   const password = document.getElementById("newpassword").value;
 
   // בדוק אם המשתמש כבר קיים
   const existingUser = users.find((user) => user.username === username);
+  console.log(existingUser)
   if (existingUser) {
     document.getElementById("change").innerHTML =
       "This username is taken. Please pick another one";
@@ -43,8 +46,7 @@ function signIn() {
   users.push(newUser); // הוסף את המשתמש החדש למערך
   window.localStorage.setItem("users", JSON.stringify(users)); // עדכן את ה-localStorage עם המערך החדש
   window.localStorage.setItem("currentUser", JSON.stringify(newUser)); // עדכן את המשתמש הנוכחי
-  window.location.href = "./index.html"; // הפניה לדף התחברות
 }
 
 const signButton = document.getElementById("signupBtn");
-signButton.addEventListener("click", () => signIn());
+signButton.addEventListener("click", (e) => signIn(e));
