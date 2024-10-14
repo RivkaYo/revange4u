@@ -14,11 +14,11 @@ class FAJAX {
 
     send(data = null) {
         this.data = data;
-        this.responseText = network({mathod: this.method, url: this.url, data: this.data});
+        this.responseText = findRightAction({mathod: this.method, url: this.url, data: this.data});
         if (typeof this.responseText === "number") {
             this.status = this.responseText;
         } else {
-            this.responseText === null;
+            this.status === 200;
         }
         if (this.responseText === null) {
             this.status = 404;

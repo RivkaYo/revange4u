@@ -1,5 +1,7 @@
 // log in !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+class database {
+    
+}
 const takeUser = () => {
  const usersArr = JSON.parse(localStorage.getItem("users")) || [];
 }

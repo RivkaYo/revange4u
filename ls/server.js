@@ -13,6 +13,10 @@ const deleteitem = url => {
     return url;
 };
 
+const findRightAction = (obj) => {
+    //by methon select option. 
+}
+
 
 
 
