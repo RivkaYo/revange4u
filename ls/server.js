@@ -1,17 +1,18 @@
-const get(url) {
+const get = url => {
     //checks
-    return;
+    return url;
 };
 
-const post(url) {
+const post = url => {
     //checks
-    return;
+    return url;
 };
 
-const delete(url) {
+const deleteitem = url => {
     //checks
-    return;
+    return url;
 };
+
 
 
 
