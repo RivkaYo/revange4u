@@ -25,7 +25,15 @@ function getRevengesRequest() {
   //display Revenges
   let displayRevengesFAJAX = new FAJAX();
   displayRevengesFAJAX.open("GET", "myServer/api/revenge");
-  displayRevengesFAJAX.onload = function () { };
+  displayRevengesFAJAX.onload = function () {
+    revengeList = JSON.parse(this.responseText);
+
+    for (let i = 0; i < revengeList.length; i++) {
+      document.getElementById(
+        "revengeList"
+      ).innerHTML += `<div class="singleRevenge"><ul>You need to revenge ${revengeList[i].name} with ${revengeList[i].details}. <button class = "completeRevengeBtn" type="button">Revenge completed!</button></ul></div> `;
+    }
+  };
   displayRevengesFAJAX.send();
 
   Array.from(document.getElementsByClassName("completeRevengeBtn")).forEach(

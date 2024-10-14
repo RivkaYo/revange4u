@@ -21,19 +21,7 @@ const addUser = () => {
 // Revenges -------------------------------------------------------------------------
 
 const getRevenges = () => {
-  revengeList = JSON.parse(localStorage.getItem("revenge"));
-  return revengeList;
-};
-
-const displayRevenges = () => {
-  //displays all revenges from ls
-  revengeList = JSON.parse(localStorage.getItem("revenge"));
-
-  for (let i = 0; i < revengeList.length; i++) {
-    document.getElementById(
-      "revengeList"
-    ).innerHTML += `<div class="singleRevenge"><ul>You need to revenge ${revengeList[i].name} with ${revengeList[i].details}. <button onclick="deleteitem()" class = "completeRevengeBtn" type="button">Revenge completed!</button></ul></div> `;
-  }
+  return localStorage.getItem("revenge")
 };
 
 const deleteRevenge = (event) => {
