@@ -25,15 +25,9 @@ const getRevenges = () => {
 };
 
 const deleteRevenge = (id) => {
-  //deleteing revenges - dosen't work yet
-  // if (div.id === event.target.id) {
-    //remove from display
-    //document.getElementById("revengeList").removeChild(div);
-  // }
   const revengeList = JSON.parse(localStorage.getItem("revenge"));
   const stringedRevengeList = JSON.stringify(revengeList.filter(revenge => revenge.id !== id));
   localStorage.setItem("revenge", stringedRevengeList);
-
 };
 
 // New revenges ---------------------------------------------------------------------
