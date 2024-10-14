@@ -46,7 +46,7 @@ const deleteRevenge = (event) => {
 
 // New revenges ---------------------------------------------------------------------
 
-const addRevenge = () => {
+const addRevenge = (currRevenge) => {
 
   //get parsed revenge list
   let revengeList = localStorage.getItem("revenge");

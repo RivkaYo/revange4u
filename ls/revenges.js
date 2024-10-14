@@ -12,26 +12,31 @@ function showContent(tempId) {
   currTemp = temp;
 }
 
+// deleteing revenges
+function deleteRevengeRequest(event) {
+  let deleteRevengeFAJAX = new FAJAX();
+  deleteRevengeFAJAX.open("DELETE", "myServer/api/revenge");
+  deleteRevengeFAJAX.onload = function () { };
+  deleteRevengeFAJAX.send(event);
+}
+
+
+function getRevengesRequest() {
+  //display Revenges
+  let displayRevengesFAJAX = new FAJAX();
+  displayRevengesFAJAX.open("GET", "myServer/api/revenge");
+  displayRevengesFAJAX.onload = function () { };
+  displayRevengesFAJAX.send();
+
+  Array.from(document.getElementsByClassName("completeRevengeBtn")).forEach(
+    (btn) => {
+      btn.addEventListener("click", (event) => deleteRevengeRequest(event));
+    }
+  );
+}
+
+getRevengesRequest();
+
 document
   .getElementById("newRevengeButton")
   .addEventListener("click", () => showContent("addRevenge"));
-
-//display Revenges
-let displayRevengesFAJAX = new FAJAX();
-displayRevengesFAJAX.open("GET", "myServer/api/revenge");
-displayRevengesFAJAX.onload = function () {};
-displayRevengesFAJAX.send(revenge);
-
-// deleteing revenges
-const deleteRevenge = (event) => {
-  let deleteRevengeFAJAX = new FAJAX();
-  deleteRevengeFAJAX.open("DELETE", "myServer/api/revenge");
-  deleteRevengeFAJAX.onload = function () {};
-  deleteRevengeFAJAX.send(event);
-};
-
-Array.from(document.getElementsByClassName("completeRevengeBtn")).forEach(
-  (btn) => {
-    btn.addEventListener("click", (event) => deleteRevenge(event));
-  }
-);

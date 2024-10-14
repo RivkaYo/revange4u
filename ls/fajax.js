@@ -15,7 +15,7 @@ class FAJAX {
   send(data = null) {
     this.data = data;
     this.responseText = findRightAction({
-      mathod: this.method,
+      method: this.method,
       url: this.url,
       data: this.data,
     });

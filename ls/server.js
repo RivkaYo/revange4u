@@ -10,7 +10,7 @@ const findRightAction = (obj) => {
         }
     } else if (obj.method === 'PUT') {
         if (obj.data) {
-            addRevenge();
+            addRevenge(obj.data);
         } else {
             addUser();
         }
