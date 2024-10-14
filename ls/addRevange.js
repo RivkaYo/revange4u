@@ -26,6 +26,15 @@ let revengeName = document.querySelector("#name");
 let revengeDetails = document.querySelector("#revengeDetails");
 
 const addRevengeToLocalStorage = () => {
+    //adds Revenge to local storage
+    let revengeName = document.querySelector("#name");
+    let revengeDetails = document.querySelector("#revengeDetails");
+
+    //creats new revenge instince
+    let revengeNameValue = revengeName.value;
+    let revengeDetailsValue = revengeDetails.value;
+    let currRevenge = new revenge(revengeNameValue, revengeDetailsValue);
+    
     let addRevengeToLocalStorageFAJAX = new FAJAX();
     addRevengeToLocalStorageFAJAX.open("post", "myServer/api/revenge");
     addRevengeToLocalStorageFAJAX.onload = function() {}
