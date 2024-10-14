@@ -31,7 +31,7 @@ const displayRevenges = () => {
     revengeList = JSON.parse(localStorage.getItem("revenge"));
 
     for (let i=0; i < revengeList.length; i++) {
-        document.getElementById("revengeList").innerHTML += `<div class="singleRevenge"><ul>You neet to revenge ${revengeList[i].name} with ${revengeList[i].details}. <button onclick="deleteitem()" class = "completeRevengeBtn" type="button">Revenge completed!</button></ul></div> `
+        document.getElementById("revengeList").innerHTML += `<div class="singleRevenge"><ul>You need to revenge ${revengeList[i].name} with ${revengeList[i].details}. <button onclick="deleteitem()" class = "completeRevengeBtn" type="button">Revenge completed!</button></ul></div> `
     };
 }
 
