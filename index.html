@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="./css/addRevege.css"><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    
 </head>
 
 <header>
@@ -20,9 +19,7 @@
     <div>
         <button id="loginbutton" class="headerbutton">log in</button>
         <button id="signupbutton" class="headerbutton">sign up</button>
-
     </div>
-    <script src="./ls/button.js"></script>
 </header>
 
 <body>
@@ -31,79 +28,56 @@
     <!--Login-->
     <template id="login">
         <div class="tempShow">
-           
-            
-            <h3>Do you want revenge? This is the place!</h3>
-            <br>
+            <h3>Do you want revenge? This is the place!</h3><br>
             <div id="center">
                 <h2 class="sign">If this is not your first revenge:</h2>
                 <form id="loginForm">
-                    
                     <label for="username"><b>User-name</b></label><br>
-                <input id="username" type="text" placeholder="Enter Username" name="username" required><br>
-                
-                <label for="password"><b>Password</b></label><br>
-                <input id="password" type="password" placeholder="Enter Password" name="password" required><br><br>
-                
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label><br>
-                
-                <button type="submit" id="submitBtn">Log-in</button><br>  
-                
-                <p id="error-message" style="color: red; display: none;">Invalid username or password</p>
-                
-                            
-                           <p id="wrong"></p>
-    
-                <br>
-                
-                
-                <h2 class="sign">If this is your first revenge:</h2> 
-                
-                <button type="submit" id="signup">sign up</button>
-                
-                <button type="submit" id="guest">Continue as a guest</button>
-            </div>
-            
+                    <input id="username" type="text" placeholder="Enter Username" name="username" required><br>
+                    
+                    <label for="password"><b>Password</b></label><br>
+                    <input id="password" type="password" placeholder="Enter Password" name="password" required><br><br>
+                    
+                    <input type="checkbox" checked="checked" name="remember"> Remember me<br>
+                    
+                    <button type="submit" id="submitBtn">Log-in</button><br>  
+                    
+                    <p id="error-message" style="color: red; display: none;">Invalid username or password</p>
+                    <p id="wrong"></p><br>
+                    
+                    <h2 class="sign">If this is your first revenge:</h2> 
+                    
+                    <button type="submit" id="signup">sign up</button>
+                    
+                    <button type="submit" id="guest">Continue as a guest</button>
+                </form>
+            </div> 
             <script src="./ls/login.js"></script>
-        </form>
         </div>
     </template>
 
     <!--Signup-->
     <template id="signUp">
-        <div class = "tempShow">
-            
+        <div class = "tempShow">  
             <h2 id="title">sign up</h2>
             <h3>You finally decided to take revenge...</h3><br>
-    
             <div id="center">
                 <h2 class="sign">Please fill in your information down below,Just because we maybe have to take revenge on you </h2>
-                
-                <form id="signupForm">
-    
                 <form id="signupForm" onsubmit="(e)=> e.preventDefault()">
-                <label for="usernameInput"><b>User-name</b></label><br>
-                <input id="newUsername" type="text" placeholder="Enter Username" name="usernameInput" required><br>
-    
-                <label for="password"><b>Password</b></label><br>
-                <input id="newpassword" type="password" placeholder="Enter Password" name="password" required><br><br>
-    
-                <!-- <label for="passwordd"><b>Password again</b></label><br>
-                <input id="passwordd" type="password" placeholder="Enter Password" name="password" required><br><br> -->
-                
-    
-                <input type="checkbox" checked="checked" name="newsletter" id="newsletter"> 
-                <label for="newsletter">Join to our newsletter</label>
-                <br><br>
-                
-                <button type="submit" id="signupBtn">sign up</button>
-                <p id="change"></p>
-            </form>
+                    <label for="usernameInput"><b>User-name</b></label><br>
+                    <input id="newUsername" type="text" placeholder="Enter Username" name="usernameInput" required><br>
+        
+                    <label for="password"><b>Password</b></label><br>
+                    <input id="newpassword" type="password" placeholder="Enter Password" name="password" required><br><br>
+                    
+                    <input type="checkbox" checked="checked" name="newsletter" id="newsletter"> 
+                    <label for="newsletter">Join to our newsletter</label><br><br>
+                    
+                    <button type="submit" id="signupBtn">sign up</button>
+                    <p id="change"></p>
+                </form>
             </div>
         </div>
-    
     <script src="./ls/signup.js"></script>
     </template>
 
@@ -111,8 +85,7 @@
     <template id="revenges">
     <div class = "tempShow">
         <h1>Life goals left:</h1>
-        <ol id="revengeList">
-        </ol>
+        <ol id="revengeList"></ol>
         <button class="newRevengeButton" id="newRevengeButton">
             <svg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#A91D3A' opacity='0';/>
             <g transform="matrix(0.83 0 0 0.83 12 12)" >
@@ -142,6 +115,8 @@
         <script src="./ls/addRevenge.js"></script>
     </div>
     </template>
+
+    <script src="./ls/button.js"></script>
     <script src="./ls/spa.js"></script>
     <script src="./ls/DB.js"></script>
     <script src="./ls/server.js"></script>

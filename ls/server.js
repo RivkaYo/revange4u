@@ -1,6 +1,6 @@
 
 const findRightAction = (obj) => {
-    //by methon select option. 
+    // Select function by methon 
     console.log(obj);
     if (obj.method === 'GET') {
         if (obj.data) {
