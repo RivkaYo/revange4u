@@ -19,7 +19,14 @@
     margin-right: 30px;
     background: none;
     border:none;
+    
+}
+
+svg {
     width: 150px;
     height: 150px;
 }
 
+svg:hover {
+    filter: brightness(85%);
+}
