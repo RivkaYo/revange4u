@@ -25,8 +25,10 @@
 svg {
     width: 150px;
     height: 150px;
+    transition: transform .7s ease-in-out;
 }
 
 svg:hover {
     filter: brightness(85%);
+    transform: rotate(360deg);
 }
