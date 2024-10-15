@@ -31,7 +31,7 @@ function logInInfo(event) {
 
   // חפש את המשתמש עם שם וסיסמה נכונים
 
-  let currentUser ;
+  let currentUser            ;
   if (currentUser) {
     document.querySelector("#wrong").innerHTML = "";
     window.localStorage.removeItem("currentUser");

@@ -20,10 +20,10 @@ document
 let displayRevengesFAJAX = new FAJAX();
 displayRevengesFAJAX.open("GET", "myServer/api/revenge");
 displayRevengesFAJAX.onload = function () {};
-displayRevengesFAJAX.send(revenge);
+displayRevengesFAJAX.send();
 
 // deleteing revenges
-const deleteRevenge = (event) => {
+const deleteRevengeRequest = (event) => {
   let deleteRevengeFAJAX = new FAJAX();
   deleteRevengeFAJAX.open("DELETE", "myServer/api/revenge");
   deleteRevengeFAJAX.onload = function () {};
@@ -32,6 +32,6 @@ const deleteRevenge = (event) => {
 
 Array.from(document.getElementsByClassName("completeRevengeBtn")).forEach(
   (btn) => {
-    btn.addEventListener("click", (event) => deleteRevenge(event));
+    btn.addEventListener("click", (event) => deleteRevengeRequest(event));
   }
 );
