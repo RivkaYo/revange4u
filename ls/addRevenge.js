@@ -11,7 +11,6 @@ function showContent(tempId) {
     currTemp = temp;
 };
 
-
 //add revenge to ls
 function addRevengeToLocalStorage() {
     // Get revenge properties
