@@ -14,18 +14,19 @@ function showContent(tempId) {
 
 // deleteing revenges
 function deleteRevengeRequest(id) {
-  console.log(id);
+  // Send FAJAX request to server to delete
   let deleteRevengeFAJAX = new FAJAX();
   deleteRevengeFAJAX.open("DELETE", "myServer/api/revenge");
   deleteRevengeFAJAX.onload = function () {
     getRevengesRequest();
   };
+
   deleteRevengeFAJAX.send(id);
 }
 
 
 function getRevengesRequest() {
-  //display Revenges
+  // Send FAJAX request to server to display Revenges
   let displayRevengesFAJAX = new FAJAX();
   displayRevengesFAJAX.open("GET", "myServer/api/revenge");
   displayRevengesFAJAX.onload = function () {

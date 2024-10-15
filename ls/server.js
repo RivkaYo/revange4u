@@ -21,8 +21,3 @@ const findRightAction = (obj) => {
         alert("Sorry, request method not found");
     }
 }
-
-
-
-
-

@@ -11,17 +11,19 @@ function showContent(tempId) {
     currTemp = temp;
 };
 
+
 //add revenge to ls
 function addRevengeToLocalStorage() {
-    //adds Revenge to local storage
+    // Get revenge properties
     let revengeName = document.querySelector("#name");
     let revengeDetails = document.querySelector("#revengeDetails");
 
-    //creats new revenge instince
+    // Creats new revenge instince
     let revengeNameValue = revengeName.value;
     let revengeDetailsValue = revengeDetails.value;
     let currRevenge = new revenge(revengeNameValue, revengeDetailsValue);
 
+    // Send FAJAX request to server
     let addRevengeToLocalStorageFAJAX = new FAJAX();
     addRevengeToLocalStorageFAJAX.open("PUT", "myServer/api/revenge");
     addRevengeToLocalStorageFAJAX.onload = function () { };
