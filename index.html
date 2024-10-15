@@ -18,8 +18,8 @@
     <img src="./logo.png">
     <h2 id="title">WELCOME TO REVANGE4U</h2>
     <div>
-        <button id="loginbutton" class="headerbutton">log in</button>
-        <button id="signupbutton" class="headerbutton">sign up</button>
+        <button id="loginbutton" class="headerbutton allbutton">log in</button>
+        <button id="signupbutton" class="headerbutton allbutton">sign up</button>
 
     </div>
     <script src="./ls/button.js"></script>
@@ -40,7 +40,7 @@
                 <form id="loginForm">
                     
                     <label for="username"><b>User-name</b></label><br>
-                <input id="username" type="text" placeholder="Enter Username" name="username" required><br>
+                <input id="username" type="text" placeholder="Enter Username" name="username" required><br><br>
                 
                 <label for="password"><b>Password</b></label><br>
                 <input id="password" type="password" placeholder="Enter Password" name="password" required><br><br>
@@ -49,7 +49,7 @@
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label><br>
                 
-                <button type="submit" id="submitBtn">Log-in</button><br>  
+                <button type="submit" id="submitBtn" class="allbutton">Log-in</button><br>  
                 
                 <p id="error-message" style="color: red; display: none;">Invalid username or password</p>
                 
@@ -61,9 +61,9 @@
                 
                 <h2 class="sign">If this is your first revenge:</h2> 
                 
-                <button type="submit" id="signup">sign up</button>
+                <button type="submit" id="signup" class="allbutton">sign up</button>
                 
-                <button type="submit" id="guest">Continue as a guest</button>
+                <button type="submit" id="guest" class="allbutton">Continue as a guest</button>
             </div>
             
             <script src="./ls/login.js"></script>
@@ -85,7 +85,7 @@
     
                 <form id="signupForm" onsubmit="(e)=> e.preventDefault()">
                 <label for="usernameInput"><b>User-name</b></label><br>
-                <input id="newUsername" type="text" placeholder="Enter Username" name="usernameInput" required><br>
+                <input id="newUsername" type="text" placeholder="Enter Username" name="usernameInput" required><br><br>
     
                 <label for="password"><b>Password</b></label><br>
                 <input id="newpassword" type="password" placeholder="Enter Password" name="password" required><br><br>
@@ -98,7 +98,7 @@
                 <label for="newsletter">Join to our newsletter</label>
                 <br><br>
                 
-                <button type="submit" id="signupBtn">sign up</button>
+                <button type="submit" id="signupBtn" class="allbutton">sign up</button>
                 <p id="change"></p>
             </form>
             </div>
@@ -113,7 +113,7 @@
         <h1>Life goals left:</h1>
         <ol id="revengeList">
         </ol>
-        <button class="newRevengeButton" id="newRevengeButton">
+        <button class="newRevengeButton allbutton" id="newRevengeButton">
             <svg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#A91D3A' opacity='0';/>
             <g transform="matrix(0.83 0 0 0.83 12 12)" >
             <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: #A91D3A; fill-rule: nonzero; opacity: 1;" transform=" translate(-15, -15)" d="M 15 3 C 8.373 3 3 8.373 3 15 C 3 21.627 8.373000000000001 27 15 27 C 21.627 27 27 21.627 27 15 C 27 8.373 21.627 3 15 3 z M 21 16 L 16 16 L 16 21 C 16 21.553 15.552 22 15 22 C 14.448 22 14 21.553 14 21 L 14 16 L 9 16 C 8.448 16 8 15.553 8 15 C 8 14.447 8.448 14 9 14 L 14 14 L 14 9 C 14 8.447 14.448 8 15 8 C 15.552 8 16 8.447 16 9 L 16 14 L 21 14 C 21.552 14 22 14.447 22 15 C 22 15.553 21.552 16 21 16 z" stroke-linecap="round"/>
