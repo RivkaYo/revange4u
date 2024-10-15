@@ -4,18 +4,18 @@ const findRightAction = (obj) => {
     console.log(obj);
     if (obj.method === 'GET') {
         if (obj.data) {
-            checkUser();
+            return checkUser();
         } else {
-            displayRevenges();
+            return getRevenges();
         }
     } else if (obj.method === 'PUT') {
         if (obj.data) {
-            addRevenge();
+            return addRevenge(obj.data);
         } else {
-            addUser();
+            return addUser();
         }
     }else if (obj.method === 'DELETE') {
-        deleteRevenge(obj.data);
+        return deleteRevenge(obj.data);
     }
     else {
         alert("Sorry, request method not found");

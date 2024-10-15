@@ -15,7 +15,7 @@ class FAJAX {
   send(data = null) {
     this.data = data;
     this.responseText = findRightAction({
-      mathod: this.method,
+      method: this.method,
       url: this.url,
       data: this.data,
     });
@@ -27,6 +27,6 @@ class FAJAX {
     if (this.responseText === null) {
       this.status = 404;
     }
-    setTimeout(this.onload(), 1000);
+    setTimeout(() => this.onload(), 1000);
   }
 }
