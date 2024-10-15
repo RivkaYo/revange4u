@@ -1,7 +1,6 @@
 
 const findRightAction = (obj) => {
     // Select function by methon 
-    console.log(obj);
     if (obj.method === 'GET') {
         if (obj.data) {
             return checkUser();

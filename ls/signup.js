@@ -29,7 +29,6 @@ function signIn(e) {
 
   // בדוק אם המשתמש כבר קיים
   const existingUser = users.find((user) => user.username === username);
-  console.log(existingUser);
   if (existingUser) {
     document.getElementById("change").innerHTML =
       "This username is taken. Please pick another one";
