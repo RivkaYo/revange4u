@@ -1,11 +1,25 @@
 
 #revengeList {
     display: flex;
+    flex-direction: column;
 }
 
 .singleRevenge {
+    background-color: rgb(214, 214, 214);
     border: 5px dotted black;
     margin: 20px;
     border-radius: 25px;
     padding: 20px;
+    max-width: 1000px;
+    min-width: 850px;
+    font-size: 3em;
 }
+
+#newRevengeButton {
+    margin-right: 30px;
+    background: none;
+    border:none;
+    width: 150px;
+    height: 150px;
+}
+
